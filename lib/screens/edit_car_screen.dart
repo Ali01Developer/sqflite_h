@@ -95,33 +95,7 @@ class _EditCarScreenState extends State<EditCarScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 25),
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundImage: imageUrlController.text.trim().isNotEmpty
-                        ? NetworkImage(imageUrlController.text.trim())
-                        : null,
-                  ),
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: "ImageUrl",
-                      ),
-                      controller: imageUrlController,
-                      validator: (value) {
-                        if (value == null || value.trim().isEmpty) {
-                          return "Please enter valid Image Url";
-                        }
-                        return null;
-                      },
-                    ),
-                  )
-                ],
-              ),
+             
               SizedBox(height: 25),
               ElevatedButton(
                 onPressed: _onSumbit,
